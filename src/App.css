@@ -36,3 +36,50 @@
     transform: rotate(360deg);
   }
 }
+
+.content{
+  background-color: green;
+  margin: 20px;
+}
+
+.centered-text {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.gallery{
+  background-color: yellow;
+  margin: 20px;
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.image-container {
+  flex: 1 0 21%; /* Ersetzen Sie 21% durch die gewünschte Breite */
+  margin: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: blue;
+}
+
+.logo-container {
+  text-align: left;
+}
+
+.button-container {
+  text-align: right;
+}
+
