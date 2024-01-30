@@ -5,22 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: red;
 }
 
-header {
-  background-color: blue;
-}
 
-.Content {
-  background-color: yellow;
-}
 
-.Gallery {
-  background-color: green;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
