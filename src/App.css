@@ -1,51 +1,33 @@
-/* Header */
-.header {
-  display: flex;
-  justify-content: space-between;
-  background-color: blue;
-  .logo-container {
-    text-align: left;
-  }
-
-  .button-container {
-    text-align: right;
-  }
+button {
+  border: none;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: large;
+  font-style: italic;
+  border-radius: 5%;
 }
 
+.button:hover {
+  cursor: pointer;
+}
+
+/* 
 .body {
   background-color: red;
 }
 
-/* Profilbeschreibung */
-.content {
-  background-color: green;
-  margin: 20px;
-  img {
-    width: 80%;
-    height: auto;
-  }
+.navbar {
+  background-color: blue;
 }
 
-/* Gallerie Bilder */
 .gallery {
   background-color: yellow;
-  margin: 20px;
-  .centered-text {
-    text-align: center;
-    text-decoration: underline;
-  }
-  .grid-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  .image-container {
-    flex: 1 0 21%;
-    margin: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  }
-  .gallery-image {
-    width: 100%;
-    height: auto;
-  }
 }
+
+.content {
+  background-color: green;
+} */

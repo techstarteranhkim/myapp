@@ -1,12 +1,12 @@
-function Header() {
+import styles from "./Navbar.module.css";
+
+function Navbar() {
   return (
-    <div className="header">
+    <div className={styles.navbar}>
       <a href="index.html" className="logo-container">
         <img
           src="https://www.creativefabrica.com/wp-content/uploads/2021/11/27/Cat-logo-Graphics-20826806-1.jpg"
           alt="Logo"
-          width="60"
-          height="50"
         />
       </a>
       <div className="button-container">
@@ -21,4 +21,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Navbar;

@@ -1,3 +1,5 @@
+import styles from "./Gallery.module.css";
+
 function Gallery() {
   const imageUrls = [
     "https://t4.ftcdn.net/jpg/00/97/58/97/240_F_97589769_t45CqXyzjz0KXwoBZT9PRaWGHRk5hQqQ.jpg",
@@ -7,15 +9,15 @@ function Gallery() {
   ];
 
   return (
-    <div>
-      <h2 className="centered-text">Catmazing Galerie</h2>
-      <div className="grid-container">
+    <div className={styles["gallery"]}>
+      <h2 className={styles["centered-text"]}>Catmazing Galerie</h2>
+      <div className={styles["grid-container"]}>
         {imageUrls.map((url, index) => (
-          <div key={index} className="image-container">
+          <div key={index} className={styles["image-container"]}>
             <img
               src={url}
-              alt={`Gallery image ${index + 1}`}
-              className="gallery-image"
+              alt={`Gallery ${index + 1}`}
+              className={styles["gallery-image"]}
             />
           </div>
         ))}

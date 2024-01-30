@@ -1,0 +1,38 @@
+.content {
+  margin: 20px;
+  padding: 10px; /* Innenabstand */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Schatten */
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textContainer {
+  flex: 1;
+}
+
+.imageContainer img {
+  margin: 10px;
+  width: 80%;
+  height: auto;
+}
+
+.content button {
+  margin: 5px;
+  background-color: #dadada;
+  color: #000000;
+}
+
+.content button:hover {
+  background-color: #6e6e6e;
+}

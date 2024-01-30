@@ -1,14 +1,16 @@
+import styles from "./Content.module.css";
+
 function Content() {
   return (
-    <div className="content">
-      <div style={{ display: "flex", flexDirection: "row" }}>
-        <div style={{ flex: 1 }}>
+    <div className={styles.content}>
+      <div className={styles.flexContainer}>
+        <div className={styles.imageContainer}>
           <img
             src="https://www.creativefabrica.com/wp-content/uploads/2021/05/01/Black-cat-simple-logo-design-Graphics-11560780-1-1-580x387.jpg"
             alt="techstarter_gmbh_logo"
           />
         </div>
-        <div style={{ flex: 1 }}>
+        <div className={styles.textContainer}>
           <h2>Cat Fanatics</h2>
           <h3>
             🐾 Welcome to Cat Fanatics! We’re a community that’s more tangled up

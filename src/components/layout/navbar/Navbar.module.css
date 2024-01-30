@@ -1,0 +1,40 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 10px; /* Innenabstand */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Schatten */
+}
+
+.navbar img {
+  max-width: 100%;
+  width: 100px;
+  height: auto;
+}
+
+.navbar .logo-container {
+  text-align: left;
+}
+
+.navbar .button-container {
+  text-align: right;
+}
+
+.navbar button:first-child {
+  background-color: #7cb9fa;
+  color: #fff;
+  margin: 20px;
+}
+
+.navbar button:last-child {
+  color: #7cb9fa;
+  margin: 20px;
+}
+
+.navbar button:hover:first-child {
+  background-color: #245c9c;
+}
+
+.navbar button:hover:last-child {
+  background-color: #828282;
+}
