@@ -1,8 +1,13 @@
 /* Gallerie Bilder */
 .gallery {
   margin: 20px;
+  margin-top: 25px;
   padding: 10px; /* Innenabstand */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Schatten */
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 
   .grid-container {
     display: flex;
@@ -12,14 +17,22 @@
   .image-container {
     flex: 1 0 21%;
     margin: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    display: flex; /* Added */
+    justify-content: center; /* Added */
+    align-items: center; /* Added */
   }
   .gallery-image {
-    width: 100%;
+    max-width: 100%;
     height: auto;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 3%;
+  }
+  .image-container:hover .gallery-image {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-in-out;
   }
 }
 .centered-text {
   text-align: center;
-  text-decoration: underline;
 }

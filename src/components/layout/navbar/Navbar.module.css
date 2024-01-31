@@ -1,9 +1,11 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-
+  background-color: rgba(255, 255, 255, 0.784);
   padding: 10px; /* Innenabstand */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Schatten */
+  align-items: center;
+  height: 50px;
 }
 
 .navbar img {
@@ -20,19 +22,37 @@
   text-align: right;
 }
 
+.navbar button {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
 .navbar button:first-child {
-  background-color: #7cb9fa;
-  color: #fff;
-  margin: 20px;
+  display: inline-block;
+  border-radius: 4px;
+  background: linear-gradient(270deg, #7cb9fa, #1759ff);
+  background-size: 200% 200%;
+  color: white;
+  padding: 10px 40px;
+  text-decoration: none;
+  transition: background-position 1s;
+  margin-right: 10px;
 }
 
 .navbar button:last-child {
-  color: #7cb9fa;
-  margin: 20px;
+  display: inline-block;
+  border-radius: 4px;
+  background: linear-gradient(270deg, #dadada, #696969);
+  background-size: 200% 200%;
+  color: white;
+  padding: 10px 40px;
+  text-decoration: none;
+  transition: background-position 1s;
+  margin-right: 10px;
+  margin-left: 20px;
 }
 
 .navbar button:hover:first-child {
-  background-color: #245c9c;
+  background-position: right;
 }
 
 .navbar button:hover:last-child {

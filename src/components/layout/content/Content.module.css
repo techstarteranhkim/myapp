@@ -1,7 +1,10 @@
 .content {
   margin: 20px;
+  margin-top: 100px;
   padding: 10px; /* Innenabstand */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Schatten */
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
 }
 
 .flexContainer {
@@ -19,20 +22,31 @@
 
 .textContainer {
   flex: 1;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .imageContainer img {
   margin: 10px;
-  width: 80%;
+  max-width: 40%;
   height: auto;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 1);
+  border-radius: 50%;
 }
 
 .content button {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: inline-block;
+  border-radius: 4px;
+  background: linear-gradient(270deg, #54e2ff, #7826fd);
+  background-size: 200% 200%;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-position 1s;
   margin: 5px;
-  background-color: #dadada;
-  color: #000000;
 }
 
 .content button:hover {
-  background-color: #6e6e6e;
+  background-position: right;
 }
