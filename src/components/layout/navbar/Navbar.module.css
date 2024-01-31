@@ -3,7 +3,7 @@
   justify-content: space-between;
   background-color: rgba(255, 255, 255, 0.784);
   padding: 10px; /* Innenabstand */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Schatten */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5); /* Schatten */
   align-items: center;
   height: 50px;
 }
@@ -56,5 +56,5 @@
 }
 
 .navbar button:hover:last-child {
-  background-color: #828282;
+  background-position: right;
 }
