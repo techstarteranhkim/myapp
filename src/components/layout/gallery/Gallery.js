@@ -7,7 +7,11 @@ function UserPost({ avatarSize, person, imageUrl, altText }) {
   const [isImageOpen, setImageOpen] = useState(false);
 
   const handleImageClick = () => {
-    setImageOpen(!isImageOpen);
+    setImageOpen(true);
+  };
+
+  const handleClose = () => {
+    setImageOpen(false);
   };
 
   return (
@@ -20,15 +24,20 @@ function UserPost({ avatarSize, person, imageUrl, altText }) {
           <img
             src={imageUrl}
             alt={altText}
-            className={
-              isImageOpen
-                ? styles["gallery-image-open"]
-                : styles["gallery-image"]
-            }
+            className={styles["gallery-image"]}
             onClick={handleImageClick}
           />
         </div>
       </div>
+      {isImageOpen && (
+        <div className={styles["modal"]} onClick={handleClose}>
+          <img
+            src={imageUrl}
+            alt={altText}
+            className={styles["modal-content"]}
+          />
+        </div>
+      )}
     </div>
   );
 }
