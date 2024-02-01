@@ -1,5 +1,44 @@
+import React, { useState } from "react";
+import PropTypes from "prop-types";
 import styles from "./Gallery.module.css";
 import Profile from "../profile";
+
+function UserPost({ avatarSize, person, imageUrl, altText }) {
+  const [isImageOpen, setImageOpen] = useState(false);
+
+  const handleImageClick = () => {
+    setImageOpen(!isImageOpen);
+  };
+
+  return (
+    <div className={styles["image-container"]}>
+      <div className="gallery-post">
+        <Profile avatarsize={avatarSize} person={person}>
+          User posts
+        </Profile>
+        <div className={styles["image-border"]}>
+          <img
+            src={imageUrl}
+            alt={altText}
+            className={
+              isImageOpen
+                ? styles["gallery-image-open"]
+                : styles["gallery-image"]
+            }
+            onClick={handleImageClick}
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+UserPost.propTypes = {
+  avatarSize: PropTypes.number.isRequired,
+  person: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
+  altText: PropTypes.string.isRequired,
+};
 
 function Gallery() {
   const imageUrls = [
@@ -15,19 +54,13 @@ function Gallery() {
       <h2 className={styles["centered-text"]}>Catmazing Guestboard</h2>
       <div className={styles["grid-container"]}>
         {imageUrls.map((url, index) => (
-          <div key={index} className={styles["image-container"]}>
-            <div className="gallery-post">
-              <Profile avatarsize={50} person={`Cat${index + 1}`}>
-                User posts
-              </Profile>
-              <hr></hr>
-              <img
-                src={url}
-                alt={`Gallery ${index + 1}`}
-                className={styles["gallery-image"]}
-              />
-            </div>
-          </div>
+          <UserPost
+            key={index}
+            avatarSize={50}
+            person={`Cat${index + 1}`}
+            imageUrl={url}
+            altText={`Bild von Cat${index + 1}`}
+          />
         ))}
       </div>
     </div>
