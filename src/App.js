@@ -4,6 +4,7 @@ import Gallery from "./components/layout/gallery";
 import Content from "./components/layout/content";
 import Background from "./components/layout/background";
 import Profile from "./components/layout/profile";
+import DatabaseResponse from "./utils";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <Background></Background>
       <Navbar></Navbar>
       <Content></Content>
-      <Gallery></Gallery>
+      <Gallery posts={DatabaseResponse.posts}></Gallery>
     </div>
   );
 }

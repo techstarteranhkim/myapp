@@ -11,16 +11,19 @@
 
   .grid-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: nowrap; /* Änderung */
+    justify-content: flex-start; /* Änderung */
+    max-height: 45vh; /* Änderung */
+    overflow-y: auto; /* Änderung */
   }
   .image-container {
     flex: 1 0 21%;
     margin: 15px;
     text-align: center;
     min-width: auto;
-    width: fit-content;
-    height: fit-content;
+    width: auto;
+    height: auto;
     display: flex; /* Added */
     flex-wrap: wrap;
     justify-content: center; /* Added */
@@ -31,7 +34,8 @@
   }
   .gallery-image {
     margin-top: 20px;
-    max-width: 100%;
+    margin-bottom: 20px;
+    max-width: 80%;
     min-width: 50%;
     height: auto; /* Feste Höhe */
     object-fit: cover; /* Behält das Seitenverhältnis bei, aber schneidet das Bild ab, um es in den Container zu passen */
@@ -55,11 +59,14 @@
   position: fixed;
   z-index: 1;
   left: 0;
-  top: auto;
+  top: 0; /* Änderung */
   width: 100%;
-  height: 100%;
+  height: 100%; /* Änderung */
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.9);
+  display: flex; /* Hinzugefügt */
+  justify-content: center; /* Hinzugefügt */
+  align-items: center; /* Hinzugefügt */
 }
 
 .modal-content {

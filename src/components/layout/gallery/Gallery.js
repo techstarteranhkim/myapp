@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styles from "./Gallery.module.css";
 import Profile from "../profile";
 
-function UserPost({ avatarSize, person, imageUrl, altText }) {
+function UserPost({ person, imageUrl, altText }) {
   const [isImageOpen, setImageOpen] = useState(false);
 
   const handleImageClick = () => {
@@ -17,9 +17,7 @@ function UserPost({ avatarSize, person, imageUrl, altText }) {
   return (
     <div className={styles["image-container"]}>
       <div className="gallery-post">
-        <Profile avatarsize={avatarSize} person={person}>
-          User posts
-        </Profile>
+        <Profile person={person}></Profile>
         <div className={styles["image-border"]}>
           <img
             src={imageUrl}
@@ -49,25 +47,15 @@ UserPost.propTypes = {
   altText: PropTypes.string.isRequired,
 };
 
-function Gallery() {
-  const imageUrls = [
-    "https://t4.ftcdn.net/jpg/00/97/58/97/240_F_97589769_t45CqXyzjz0KXwoBZT9PRaWGHRk5hQqQ.jpg",
-    "https://t3.ftcdn.net/jpg/03/31/21/08/240_F_331210846_9yjYz8hRqqvezWIIIcr1sL8UB4zyhyQg.jpg",
-    "https://t4.ftcdn.net/jpg/01/02/62/81/240_F_102628155_ZPiAaNEDRSZU2S0LAkbcgvwLyMmr9c2Y.jpg",
-    "https://images.pexels.com/photos/2071882/pexels-photo-2071882.jpeg?cs=srgb&dl=pexels-wojciech-kumpicki-2071882.jpg",
-    // ...
-  ];
-
+function Gallery({ posts }) {
   return (
     <div className={styles["gallery"]}>
       <h2 className={styles["centered-text"]}>Catmazing Guestboard</h2>
       <div className={styles["grid-container"]}>
-        {imageUrls.map((url, index) => (
+        {posts.map((post, index) => (
           <UserPost
-            key={index}
-            avatarSize={50}
-            person={`Cat${index + 1}`}
-            imageUrl={url}
+            person={{ name: `Cat${index + 1}`, image: post.image }} // Änderung
+            imageUrl={post.image}
             altText={`Bild von Cat${index + 1}`}
           />
         ))}
