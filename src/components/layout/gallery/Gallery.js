@@ -5,6 +5,7 @@ import Profile from "../profile";
 
 function UserPost({ person, imageUrl, altText }) {
   const [isImageOpen, setImageOpen] = useState(false);
+  const [status, setStatus] = useState(null); // Zustand für den Status
 
   const handleImageClick = () => {
     setImageOpen(true);
@@ -12,6 +13,14 @@ function UserPost({ person, imageUrl, altText }) {
 
   const handleClose = () => {
     setImageOpen(false);
+  };
+
+  const handleLike = () => {
+    setStatus(status === "like" ? null : "like"); // Setzt den Status auf 'like' oder null
+  };
+
+  const handleDislike = () => {
+    setStatus(status === "dislike" ? null : "dislike"); // Setzt den Status auf 'dislike' oder null
   };
 
   return (
@@ -26,6 +35,16 @@ function UserPost({ person, imageUrl, altText }) {
             onClick={handleImageClick}
           />
         </div>
+        <button onClick={handleLike}>
+          <img src="/path/to/thumbs-up.png" alt="Like" />{" "}
+          {/* Pfad zu Ihrem Daumen-hoch-Bild */}
+          {status === "like" ? "Liked" : "Like"}
+        </button>
+        <button onClick={handleDislike}>
+          <img src="/path/to/thumbs-down.png" alt="Dislike" />{" "}
+          {/* Pfad zu Ihrem Daumen-runter-Bild */}
+          {status === "dislike" ? "Disliked" : "Dislike"}
+        </button>
       </div>
       {isImageOpen && (
         <div className={styles["modal"]} onClick={handleClose}>
