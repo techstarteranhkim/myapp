@@ -3,7 +3,6 @@ import Navbar from "./components/layout/navbar";
 import Gallery from "./components/layout/gallery";
 import Content from "./components/layout/content";
 import Background from "./components/layout/background";
-import Profile from "./components/layout/profile";
 import DatabaseResponse from "./utils";
 
 function App() {
@@ -11,8 +10,11 @@ function App() {
     <div className="body">
       <Background></Background>
       <Navbar></Navbar>
-      <Content></Content>
-      <Gallery posts={DatabaseResponse.posts}></Gallery>
+      <Content profile={DatabaseResponse.profile}></Content>
+      <Gallery
+        profile={DatabaseResponse.profile}
+        posts={DatabaseResponse.posts}
+      ></Gallery>
     </div>
   );
 }

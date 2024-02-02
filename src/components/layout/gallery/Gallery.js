@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styles from "./Gallery.module.css";
 import Profile from "../profile";
 
-function UserPost({ person, imageUrl, altText }) {
+function UserPost({ profile, imageUrl, altText }) {
   const [isImageOpen, setImageOpen] = useState(false);
   const [status, setStatus] = useState(null); // Zustand für den Status
 
@@ -26,7 +26,7 @@ function UserPost({ person, imageUrl, altText }) {
   return (
     <div className={styles["image-container"]}>
       <div className="gallery-post">
-        <Profile person={person}></Profile>
+        <Profile person={profile}></Profile>
         <div className={styles["image-border"]}>
           <img
             src={imageUrl}
@@ -66,14 +66,14 @@ UserPost.propTypes = {
   altText: PropTypes.string.isRequired,
 };
 
-function Gallery({ posts }) {
+function Gallery({ profile, posts }) {
   return (
     <div className={styles["gallery"]}>
       <h2 className={styles["centered-text"]}>Catmazing Guestboard</h2>
       <div className={styles["grid-container"]}>
         {posts.map((post, index) => (
           <UserPost
-            person={{ name: `Cat${index + 1}`, image: post.image }} // Änderung
+            profile={profile} // Änderung
             imageUrl={post.image}
             altText={`Bild von Cat${index + 1}`}
           />

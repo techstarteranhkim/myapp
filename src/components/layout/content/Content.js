@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styles from "./Content.module.css";
 
-function Content() {
-  const [followers, setFollowers] = useState(100); // Zustand für Follower
+function Content({ profile }) {
+  const [followers, setFollowers] = useState(profile.followerCount); // Zustand für Follower
   const [isFollowing, setIsFollowing] = useState(false); // Zustand für Follow-Status
 
   const handleFollow = () => {
