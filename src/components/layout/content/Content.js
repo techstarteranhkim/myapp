@@ -1,6 +1,19 @@
+import React, { useState } from "react";
 import styles from "./Content.module.css";
 
 function Content() {
+  const [followers, setFollowers] = useState(100); // Zustand für Follower
+  const [isFollowing, setIsFollowing] = useState(false); // Zustand für Follow-Status
+
+  const handleFollow = () => {
+    if (isFollowing) {
+      setFollowers(followers - 1); // Verringert die Anzahl der Follower um 1
+    } else {
+      setFollowers(followers + 1); // Erhöht die Anzahl der Follower um 1
+    }
+    setIsFollowing(!isFollowing); // Wechselt den Follow-Status
+  };
+
   return (
     <div className={styles.content}>
       <div className={styles.flexContainer}>
@@ -26,7 +39,12 @@ function Content() {
             people together!
           </h3>
           <h3>🐈‍⬛ #CatFanatics #CrazyForCats</h3>
-          <button>Follow</button>
+          <h3>Followers: {followers}</h3>{" "}
+          {/* Anzeige der Follower aus dem Zustand */}
+          <button onClick={handleFollow}>
+            {isFollowing ? "Unfollow" : "Follow"}
+          </button>{" "}
+          {/* Aufruf der handleFollow-Funktion beim Klicken und Anzeige des entsprechenden Textes */}
           <button>Message</button>
         </div>
       </div>

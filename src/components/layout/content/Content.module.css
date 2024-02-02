@@ -49,8 +49,13 @@
   text-decoration: none;
   transition: background-position 1s;
   margin: 5px;
+  transition: transform 0.1s ease-in-out;
 }
 
 .content button:hover {
   background-position: right;
+}
+
+.content button:active {
+  transform: scale(0.9); /* Hinzugefügt */
 }

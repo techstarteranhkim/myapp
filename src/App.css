@@ -15,19 +15,26 @@ button {
   cursor: pointer;
 }
 
-/* 
-.body {
-  background-color: red;
+/* Breite der Scrollbar */
+::-webkit-scrollbar {
+  width: 20px;
 }
 
-.navbar {
-  background-color: blue;
+/* Hintergrundfarbe der Scrollbar */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px; /* Runde Ecken */
 }
 
-.gallery {
-  background-color: yellow;
+/* Farbe des Scroll-Knopfes */
+::-webkit-scrollbar-thumb {
+  background: #87cefaae; /* Hellblau */
+  border-radius: 10px; /* Runde Ecken */
+  transition: background 0.5s ease-in-out; /* Hinzugefügt */
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.content {
-  background-color: green;
-} */
+/* Farbe des Scroll-Knopfes beim Überfahren mit der Maus */
+::-webkit-scrollbar-thumb:hover {
+  background: #1e8fff85; /* Dunkleres Blau */
+}
