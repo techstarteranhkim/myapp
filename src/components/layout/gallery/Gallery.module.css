@@ -38,7 +38,7 @@
     max-width: 80%;
     min-width: 50%;
     height: auto; /* Feste Höhe */
-    object-fit: cover; /* Behält das Seitenverhältnis bei, aber schneidet das Bild ab, um es in den Container zu passen */
+    object-fit: contain; /* Behält das Seitenverhältnis bei, aber schneidet das Bild ab, um es in den Container zu passen */
     border-radius: 3%;
   }
   .image-container:hover .gallery-image {
