@@ -14,6 +14,12 @@
   height: auto;
 }
 
+.navbar img:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
 .navbar .logo-container {
   text-align: left;
 }
@@ -36,6 +42,11 @@
   text-decoration: none;
   transition: background-position 1s;
   margin-right: 10px;
+  transition: transform 0.1s ease-in-out;
+}
+
+.navbar button:first-child:active {
+  transform: scale(0.9); /* Hinzugefügt */
 }
 
 .navbar button:last-child {
@@ -49,12 +60,21 @@
   transition: background-position 1s;
   margin-right: 10px;
   margin-left: 20px;
+  transition: transform 0.1s ease-in-out;
+}
+
+.navbar button:last-child:active {
+  transform: scale(0.9); /* Hinzugefügt */
 }
 
 .navbar button:hover:first-child {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease-in-out;
   background-position: right;
 }
 
 .navbar button:hover:last-child {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease-in-out;
   background-position: right;
 }
